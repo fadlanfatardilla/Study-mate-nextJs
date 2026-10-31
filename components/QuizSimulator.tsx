@@ -26,7 +26,7 @@ function shuffleArray<T>(array: T[]): T[] {
 
 export default function QuizSimulator({ questions, onAskTutor }: QuizSimulatorProps) {
   const [activeQuestions, setActiveQuestions] = useState<QuizQuestion[]>([]);
-  const [usedQuestionIds, setUsedQuestionIds] = useState<string[]>([]);
+  const [usedQuestionIds, setUsedQuestionIds] = useState<(string | number)[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
   const [score, setScore] = useState(0);
